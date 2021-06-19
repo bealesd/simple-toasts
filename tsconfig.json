@@ -11,6 +11,12 @@
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
+    "paths": {
+      "ngx-simple-toasts": [
+        "dist/ngx-simple-toasts/ngx-simple-toasts",
+        "dist/ngx-simple-toasts"
+      ]
+    },
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,

@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "ngx-simple-toasts": {
+      "projectType": "library",
+      "root": "projects/ngx-simple-toasts",
+      "sourceRoot": "projects/ngx-simple-toasts/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-simple-toasts/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-simple-toasts/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-simple-toasts/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-simple-toasts/src/test.ts",
+            "tsConfig": "projects/ngx-simple-toasts/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-simple-toasts/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ngx-simple-toasts"
 }
